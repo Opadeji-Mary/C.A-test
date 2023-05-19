@@ -1,0 +1,10 @@
+.all{
+    background-image: url(/download\ \(11\).jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 10cm;
+    width: 50vh;
+}
+.image{
+    border-radius: 50px;
+}

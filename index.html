@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+   <div class="all">
+    <h1>Phone Accesories</h1>
+    </div>
+    <input class="form-control mt-2" type="text" placeholder="Add number of your order" id="inputUser">
+    <button class="btn btn-danger" onclick="add()">Add</button>
+    <button class="btn btn-danger" onclick="edit()">Edit</button>
+    <button class="btn btn-danger" onclick="del()">Delete</button>
+    <button class="btn btn-danger" onclick="dellete()">delete all</button>
+    <div id="display"></div>
+    <div class="image">
+        <img id="1" src="/download (1).jpg" alt="">
+        <img id="2" src="/download (2).jpg" alt="">
+        <img id="3" src="/download (3).jpg" alt="">
+        <img id="4" src="/download (4).jpg" alt="">
+        <img id="5" src="/download (5).jpg" alt="">
+        <img id="6" src="/download (6).jpg" alt="">
+        <img id="7" src="/download (7).jpg" alt="">
+        <img id="8" src="/download (8).jpg" alt="">
+        <img id="9" src="/download (9).jpg" alt="">
+        <img id="10" src="/download (10).jpg" alt="">
+        <img id="11" src="/download (11).jpg" alt="">
+        <img id="12" src="/download (12).jpg" alt="">
+        <img id="13" src="/download (13).jpg" alt="">
+        <img id="14" src="/download (14).jpg" alt="">
+        <img id="15" src="/download (15).jpg" alt="">
+        <img id="16" src="/download (16).jpg" alt="">
+        <img id="17" src="/download (17).jpg" alt="">
+        <img id="18" src="/download (18).jpg" alt="">
+        <img id="19" src="/download (19).jpg" alt="">
+    </div>
+    <div>
+    </div>
+    <script>
+        var allTodo=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+        function add(){
+            allTodo.push(inputUser.value)
+            inputUser.value = ""
+            console.log(allTodo)
+            display.innerHTML +=`${inputUser.value}</h1>`
+        
+        }
+        function del(){
+            allTodo.pop(6)
+            console.log(allTodo)
+            display.innerHTML =`<h1>${allTodo}</h1>`
+        }
+        function edit(set){
+          var userEdit=prompt("index to edit ")
+          var userReplacement=prompt("enter replacement")
+          allTodo.splice(userEdit,1,userReplacement)
+          display.innerHTML= allTodo
+        }
+        function dellete(){
+            allTodo.splice(0)
+            console.log(allTodo)
+            display.innerHTML =`<h1>${allTodo}</h1>`
+        }
+    </script>
+</body>
+</html>
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
